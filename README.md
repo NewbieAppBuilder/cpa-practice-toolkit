@@ -18,6 +18,30 @@ A Claude Cowork plugin for solo CPAs and small firms. Automates the most repetit
 
 ---
 
+## 🚀 Pro Version Available
+
+The free version includes 3 skills. Unlock the full toolkit with Pro:
+
+| Feature | Free | Pro |
+|---|---|---|
+| Client Document Checklist | ✅ | ✅ |
+| Missing Docs Follow-Up Email | ✅ | ✅ |
+| Return Status Email | ✅ | ✅ |
+| Engagement Letter (Individual & Business) | ❌ | ✅ |
+| Engagement Termination Letter | ❌ | ✅ |
+| LLC Monthly P&L Summary | ❌ | ✅ |
+| Word/PDF/Portal Output Formats | ❌ | ✅ |
+| IRC §7216 Compliant Language | ❌ | ✅ |
+| NYC GCT S-Corp Warning | ❌ | ✅ |
+| Bilingual English & Spanish | ✅ | ✅ |
+
+👉 [Get CPA Practice Toolkit Pro — $47 one-time](https://gumroad.com/l/cpa-practice-toolkit-pro)
+
+Built by Aakash Shah, CPA
+Questions: aakash@aakashshahcpa.com
+
+---
+
 ## Bilingual Support / Soporte Bilingüe
 
 Every skill in this plugin supports English and Spanish. After generating any document, Claude will ask:
