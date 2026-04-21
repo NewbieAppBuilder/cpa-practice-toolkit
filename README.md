@@ -101,7 +101,7 @@ claude plugins add cpa-practice-toolkit
 | `/llc:monthly-summary` | — | ✅ |
 | Bilingual (English + Spanish) | — | ✅ |
 
-**Pro version**: [GUMROAD LINK COMING SOON]
+**Pro version**: [Get CPA Practice Toolkit Pro — $47 one-time](https://gumroad.com/l/cpa-practice-toolkit-pro)
 
 ---
 
