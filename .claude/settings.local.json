@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(mkdir -p /Users/aakash_shah/solo-cpa-toolkit/.claude-plugin)",
+      "Bash(mkdir -p /Users/aakash_shah/solo-cpa-toolkit/commands)",
+      "Bash(mkdir -p /Users/aakash_shah/solo-cpa-toolkit/skills/client-checklist)",
+      "Bash(mkdir -p /Users/aakash_shah/solo-cpa-toolkit/skills/engagement-letter)",
+      "Bash(mkdir -p /Users/aakash_shah/solo-cpa-toolkit/skills/missing-docs-followup)"
+    ]
+  }
+}

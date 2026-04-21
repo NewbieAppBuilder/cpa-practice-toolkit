@@ -1,0 +1,8 @@
+{
+  "name": "CPA Practice Toolkit",
+  "version": "1.2.0",
+  "description": "A Claude Cowork plugin for solo CPAs and small firms. Automates engagement letters, client checklists, missing docs follow-ups, status emails, LLC summaries, and engagement termination letters. Bilingual: English and Spanish. | Un plugin de Claude Cowork para CPAs independientes y firmas pequeñas. Automatiza cartas de compromiso, listas de documentos, correos de seguimiento, actualizaciones de estado, resúmenes de P&L y cartas de terminación. Bilingüe: inglés y español.",
+  "author": {
+    "name": "Aakash Shah, CPA — Aakash Shah CPA PPLC"
+  }
+}
