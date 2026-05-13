@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CPA Practice Toolkit — Instagram Post</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #0f0f1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 20px;
+  }
+
+  .post {
+    width: 1080px;
+    height: 1080px;
+    background: #1a1a2e;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 72px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  }
+
+  /* Decorative background accents */
+  .post::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,165,0,0.18) 0%, rgba(240,165,0,0) 70%);
+    pointer-events: none;
+  }
+  .post::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -200px;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,165,0,0.10) 0%, rgba(240,165,0,0) 70%);
+    pointer-events: none;
+  }
+
+  .grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(240,165,0,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(240,165,0,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    margin-bottom: 44px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #f0a500;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .eyebrow::before,
+  .eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: #f0a500;
+  }
+
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 84px;
+    font-weight: 900;
+    line-height: 1.02;
+    color: #f0a500;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+  }
+
+  .subheading {
+    font-size: 22px;
+    font-weight: 500;
+    color: #e8e8f0;
+    letter-spacing: 0.3px;
+  }
+  .subheading .dot {
+    color: #f0a500;
+    margin: 0 10px;
+  }
+
+  /* COLUMNS */
+  .columns {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .column {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(240,165,0,0.22);
+    border-radius: 20px;
+    padding: 40px 34px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column.pro {
+    background: linear-gradient(160deg, rgba(240,165,0,0.14) 0%, rgba(240,165,0,0.03) 100%);
+    border-color: rgba(240,165,0,0.55);
+  }
+
+  .col-label {
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .col-title {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .col-title .emoji {
+    font-size: 34px;
+  }
+
+  .column.free .col-title { color: #ffffff; }
+  .column.pro .col-title { color: #f0a500; }
+
+  .price-tag {
+    display: inline-block;
+    background: #f0a500;
+    color: #1a1a2e;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 8px;
+    margin-left: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  .features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .features li {
+    font-size: 22px;
+    font-weight: 500;
+    color: #e8e8f0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    line-height: 1.3;
+  }
+
+  .features li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f0a500;
+    flex-shrink: 0;
+  }
+
+  .column.free .features li::before {
+    background: #ffffff;
+    opacity: 0.75;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .divider {
+    width: 80px;
+    height: 2px;
+    background: #f0a500;
+    margin: 0 auto 22px;
+  }
+
+  .availability {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.4px;
+    margin-bottom: 12px;
+  }
+  .availability .brand {
+    color: #f0a500;
+    font-weight: 700;
+  }
+
+  .handle {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="post">
+    <div class="grid-pattern"></div>
+
+    <div class="header">
+      <div class="eyebrow">For CPAs &amp; Accounting Pros</div>
+      <h1 class="title">CPA Practice<br>Toolkit</h1>
+      <p class="subheading">
+        AI-Powered<span class="dot">•</span>Built by a CPA<span class="dot">•</span>Free to Start
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column free">
+        <div class="col-label">Tier 01</div>
+        <div class="col-title">
+          <span class="emoji">🆓</span>
+          <span>FREE</span>
+        </div>
+        <ul class="features">
+          <li>Client checklists</li>
+          <li>Follow-up emails</li>
+          <li>Status updates</li>
+          <li>English + Spanish</li>
+        </ul>
+      </div>
+
+      <div class="column pro">
+        <div class="col-label">Tier 02</div>
+        <div class="col-title">
+          <span class="emoji">💼</span>
+          <span>PRO</span>
+          <span class="price-tag">$47</span>
+        </div>
+        <ul class="features">
+          <li>Engagement letters</li>
+          <li>Termination letters</li>
+          <li>LLC P&amp;L summaries</li>
+          <li>Word / PDF formats</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="divider"></div>
+      <div class="availability">Available on <span class="brand">Claude Cowork</span></div>
+      <div class="handle">@KashFlowCPA</div>
+    </div>
+  </div>
+</body>
+</html>
